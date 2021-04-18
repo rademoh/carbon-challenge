@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.rabiu.carbonchallenge.ui.userDetail.UserDetailViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/default_screen_margin"
+        android:layout_height="match_parent"
+        tools:context=".ui.userDetail.UserDetailActivity">
+
+
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:scaleType="centerCrop"
+                android:layout_height="80dp"
+                app:imageFromUrl="@{viewModel.user.picture}"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="First name"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.user.firstName}"
+                tools:text="Rabius"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_marginTop="@dimen/default_screen_margin"
+                android:layout_width="match_parent"
+                android:background="@color/very_light_divider"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Last name"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Ademoh"
+                android:text="@{viewModel.user.lastName}"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_marginTop="@dimen/default_screen_margin"
+                android:layout_width="match_parent"
+                android:background="@color/very_light_divider"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_screen_margin"
+                android:text="Phone number"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.user.phone}"
+                tools:text="08141966808"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_marginTop="@dimen/default_screen_margin"
+                android:layout_width="match_parent"
+                android:background="@color/very_light_divider"
+                android:layout_height="1dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Email address"
+                android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.user.email}"
+            tools:text="rademoh@yahoo.com"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_marginTop="@dimen/default_screen_margin"
+            android:layout_width="match_parent"
+            android:background="@color/very_light_divider"
+            android:layout_height="1dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Location"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.user.location.country}"
+            tools:text="Abuja"
+            android:textSize="16sp" />
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:visibility="visible" />
+
+        </LinearLayout>
+
+</layout>
